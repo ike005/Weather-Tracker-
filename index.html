@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather API</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="secondary-container">
+            <div id="content-container">
+                <div class="header">
+                    <h1>Weather Lookup</h1>
+                    <p>Type your Zip Code to see the weather</p>
+                </div>
+
+                <div id="changing-container">
+                    <div id="zip-code-form">
+                        <div class="zip-code-input-container">
+                            <label for="zip-code-value">ZIP CODE</label>
+                            <input type="text" id="zip-code-value" placeholder="text goes here" required/>
+                        </div>
+                        <div id="zip-code-error">
+                            <p>Please enter a zipcode to search</p>
+                        </div>
+                        <button id="zip-code-button">submit</button>
+                    </div>
+                </div>
+
+                <div id="display-info-container">
+                    <h1 id="city-name"></h1>
+                    <h1 id="current-temperature"></h1>
+                    <h2 id="feel-temperature"></h2>
+                    <div id="temperature-range">
+                        <p id="low-range"></p>
+                        <p id="high-range"></p>
+                    </div>
+                    <button id="change-location">Change Location</button>
+                </div>
+            </div>
+        </div>
+
+    <script src="index.js"></script>
+    </body>
+
+</html>
