@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 const zipCodeContainer = document.getElementById('changing-container');
 const weatherContainer = document.getElementById('display-info-container');
 const userZipCode = document.getElementById('zip-code-value');
@@ -11,7 +14,7 @@ function kelvinToFahrenheit(kelvin) {
     return (kelvin - 273.15) * 9/5 + 32;
 }
 
-openWeatherApiKey = "1b0f4529f6b03a65738f138508968d2b"
+openWeatherApiKey = ""
 async function getWeatherInfo(zipCode) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&appid=${openWeatherApiKey}`);
     const data = await response.json();
